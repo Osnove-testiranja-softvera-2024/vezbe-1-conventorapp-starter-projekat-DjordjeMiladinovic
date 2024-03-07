@@ -15,18 +15,8 @@ namespace OTS2023_ConventorApp
                 return Math.Round(value / 3.281, 3);
             }
 
-            public double ConvertArray(string array)
-            {
-                List<String> values = array.Split(',').ToList();
-                double[] numbers = Class.Utilities.ConvertArray(values);
 
-                double number = 0;
-                for (int i = 0; i < values.Count; i++)
-                {
-                    number += numbers[i];
-                }
-                return number;
-            }
 
         }
     }
+}

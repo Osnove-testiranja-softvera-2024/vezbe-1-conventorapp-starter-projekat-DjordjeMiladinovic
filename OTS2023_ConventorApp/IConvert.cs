@@ -8,10 +8,13 @@ namespace OTS2023_ConventorApp
 {
     internal interface IConvert
     {
-        public static double Convert(string value)
-        {
+        
+            
+                double Convert(double value);
 
-        }
+
+            
+        
         
     }
 }

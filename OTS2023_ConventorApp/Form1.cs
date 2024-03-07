@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static OTS2023_ConventorApp.LenghtConverter;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace OTS2023_ConventorApp
 {
@@ -35,29 +38,23 @@ namespace OTS2023_ConventorApp
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {   if(radioButton1.Checked == true)
+        {
+            if (radioButton1.Checked == true)
             {
-                if (label1.Text != null)
-                {
-                    Convert
-                }
-            }
-            else if(radioButton2.Checked == true)
-            {
-                if(label1.Text != null)
-                {
+                MassConverter converter = new MassConverter();
+                textBox2.Text = converter.Convert(Convert.ToInt64(textBox1.Text)).ToString();
 
-                }
+            }
+            else if (radioButton2.Checked == true)
+            {
+                LengthConverter converter = new LengthConverter();
+                textBox2.Text = converter.Convert(Convert.ToInt64(textBox1.Text)).ToString();
             }
         }
     }
-    public class ConvertMass()
-    {
 
-    }
 
-    public class ConvertLenght()
-    {
+    
 
-    }
 }
+
